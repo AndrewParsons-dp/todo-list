@@ -70,6 +70,14 @@ function update() {
         entry.appendChild(finButton);
         completedList.appendChild(entry);
     }
+    if (!todoList.firstChild) {
+        todoList.appendChild(document.createTextNode("No To-Do's yet"));
+    }
+    if (!completedList.firstChild) {
+        completedList.appendChild(
+            document.createTextNode("No completed To-Do's yet")
+        );
+    }
 }
 
 function newTask() {
